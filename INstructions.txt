@@ -4,17 +4,17 @@ Requirements
 
 useContext
 ~~useState~~
-section - flex full screen scroll
+~~section - flex full screen scroll~~ - watch later
 animation
     * Machine roll 
-    * section locator
+    ~~* section locator~~- watch later
     * Level scroll
     * Slide wind
 ~~hover comment~~
 ~~Static site~~
 carousel
     ~~* Slide~~
-    * Stack slide - watch later
+    ~~* Stack slide~~ - watch later
 ~~typewriter~~
 gmail or mail api
 ~~settimeout~~
