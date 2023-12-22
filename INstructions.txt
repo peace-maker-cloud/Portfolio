@@ -10,13 +10,13 @@ animation
     * section locator
     * Level scroll
     * Slide wind
-hover comment
+~~hover comment~~
 ~~Static site~~
 carousel
     ~~* Slide~~
-    * Stack slide
+    * Stack slide - watch later
 ~~typewriter~~
-gmail or gmail api
+gmail or mail api
 ~~settimeout~~
-setinterval
+~~setinterval~~
 
