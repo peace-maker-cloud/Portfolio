@@ -2,9 +2,9 @@ steps to build the Portfolio
 
 Requirements
 
-useContext
+~~useContext~~
 ~~useState~~
-~~section - flex full screen scroll~~ - watch later
+~~section - flex full screen scroll~~
 animation
     * Machine roll 
     ~~* section locator~~- watch later
@@ -12,11 +12,57 @@ animation
     * Slide wind
 ~~hover comment~~
 ~~Static site~~
-carousel
-    ~~* Slide~~
-    ~~* Stack slide~~ - watch later
+~~carousel Slide~~
 ~~typewriter~~
-gmail or mail api
 ~~settimeout~~
 ~~setinterval~~
+
+dependencies - done
+
+~~dayjs~~
+~~react~~
+~~react-dom~~
+~~react-router-dom~~
+~~react-slick~~
+~~slick-carousel~~
+~~concurrently~~
+~~swiper~~
+~~react-id-swiper~~
+
+
+~~CSS Parts~~
+
+extend: {
+    screens: {
+    others: "360px",
+    iphoneSE: "375px",
+    miNote: "390px",
+    oneSamPixel: "412px",
+    iphoneXR: "414px",
+    },
+    fontFamily: {
+    poppins: "Poppins,sans-serif",
+    },
+},
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+className is hide-scrollbar overflow-y-scroll
+
+/* index.css */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+
+
 
