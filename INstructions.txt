@@ -29,6 +29,11 @@ dependencies - done
 ~~swiper~~
 ~~react-id-swiper~~
 
+dayjs react react-dom react-router-dom react-slick slick-carousel concurrently
+swiper
+react-id-swiper
+
+
 
 ~~CSS Parts~~
 
