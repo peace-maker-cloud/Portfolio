@@ -50,6 +50,17 @@ extend: {
     },
 },
 
+<link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+<script src="https://unicons.iconscout.com/release/v4.0.8/script/monochrome/bundle.js"/>
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/thinline.css">
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 
