@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Projects = () => {
-  return <div>Projects</div>;
+  return <div className="project-anime">Projects</div>;
 };

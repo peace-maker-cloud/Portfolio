@@ -6,6 +6,10 @@ import { Extras } from "./division/Extras";
 import { Contact } from "./division/Contact";
 
 export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setActvSec }) => {
+  // Code Space
+
+  // Scroll Effect
+
   const scrollContainerRef = useRef(null);
   const [prevScrollY, setPrevScrollY] = useState(0);
 
@@ -95,6 +99,10 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setActvSec }) => {
     };
   }, [setMs1Rotate, setMs2Rotate, prevScrollY]);
 
+  // Scroll Effect
+
+  // End oF Code Space
+
   return (
     <div
       ref={scrollContainerRef}
@@ -103,22 +111,16 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setActvSec }) => {
       <section id="HOME" className="w-full h-screen snap-start">
         <Home />
       </section>
-      <section
-        id="PROJECT"
-        className="w-full h-screen snap-start project-anime"
-      >
+      <section id="PROJECT" className="w-full h-screen snap-start">
         <Projects />
       </section>
-      <section id="EDUCAT" className="w-full h-screen snap-start educat-anime">
+      <section id="EDUCAT" className="w-full h-screen snap-start">
         <Educat />
       </section>
-      <section id="EXTRAS" className="w-full h-screen snap-start extras-anime">
+      <section id="EXTRAS" className="w-full h-screen snap-start ">
         <Extras />
       </section>
-      <section
-        id="CONTACT"
-        className="w-full h-screen snap-start contact-anime"
-      >
+      <section id="CONTACT" className="w-full h-screen snap-start ">
         <Contact />
       </section>
     </div>
