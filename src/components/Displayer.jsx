@@ -14,6 +14,7 @@ export const Displayer = () => {
     <div className="MainContainer flex h-screen w-screen">
       <Navbar ms1Rotate={ms1Rotate} ms2Rotate={ms2Rotate} actvSec={actvSec} />
       <Visualizer
+        actvSec={actvSec}
         ms1Rotate={ms1Rotate}
         ms2Rotate={ms2Rotate}
         setMs1Rotate={setMs1Rotate}
