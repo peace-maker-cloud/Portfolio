@@ -7,23 +7,18 @@ export const Displayer = () => {
 
   const [ms1Rotate, setMs1Rotate] = useState(0);
   const [ms2Rotate, setMs2Rotate] = useState(45);
-  const [ms3Rotate, setMs3Rotate] = useState(0);
+  const [actvSec, setActvSec] = useState("HOME");
 
   // End of code space
   return (
     <div className="MainContainer flex h-screen w-screen">
-      <Navbar
-        ms1Rotate={ms1Rotate}
-        ms2Rotate={ms2Rotate}
-        ms3Rotate={ms3Rotate}
-      />
+      <Navbar ms1Rotate={ms1Rotate} ms2Rotate={ms2Rotate} actvSec={actvSec} />
       <Visualizer
         ms1Rotate={ms1Rotate}
         ms2Rotate={ms2Rotate}
-        ms3Rotate={ms3Rotate}
         setMs1Rotate={setMs1Rotate}
         setMs2Rotate={setMs2Rotate}
-        setMs3Rotate={setMs3Rotate}
+        setActvSec={setActvSec}
       />
     </div>
   );

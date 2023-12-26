@@ -1,46 +1,62 @@
 import React from "react";
 
-export const Subnavbar = () => {
+export const Subnavbar = ({ actvSec, setActvSec }) => {
   return (
-    <div className="SubNavbars flex flex-col justify-between items-center gap-7 text-center text-xl text-black">
-      <a className="active bg-white rounded-full w-11 p-1" href="#HOME">
-        <i className="fa-solid fa-house text-3xl"></i>
+    <div className="SubNavbars flex flex-col justify-between items-center gap-36 text-center text-xl">
+      <a
+        onClick={() => {
+          setActvSec("HOME");
+        }}
+        className={`transition-all rounded-full w-11 p-1 ${
+          actvSec === "HOME" ? "text-black bg-white" : "text-white bg-black"
+        }`}
+        href="#HOME"
+      >
+        <i className="transition-all fa-solid fa-house text-3xl"></i>
       </a>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <a className=" rounded-full w-11 p-1 text-white" href="#PROJECT">
-        <i className="fa-solid fa-diagram-project text-3xl"></i>
+      <a
+        onClick={() => {
+          setActvSec("PROJECT");
+        }}
+        className={`transition-all rounded-full w-11 p-1 ${
+          actvSec === "PROJECT" ? "text-black bg-white" : "text-white bg-black"
+        }`}
+        href="#PROJECT"
+      >
+        <i className="transition-all fa-solid fa-diagram-project text-3xl"></i>
       </a>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <a className=" rounded-full w-11 p-1 text-white" href="#EDUCAT">
-        <i className="fa-solid fa-user-graduate text-3xl"></i>
+      <a
+        onClick={() => {
+          setActvSec("EDUCAT");
+        }}
+        className={`transition-all rounded-full w-11 p-1 ${
+          actvSec === "EDUCAT" ? "text-black bg-white" : "text-white bg-black"
+        }`}
+        href="#EDUCAT"
+      >
+        <i className="transition-all fa-solid fa-user-graduate text-3xl"></i>
       </a>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <a className=" rounded-full w-11 p-1 text-white" href="#EXTRAS">
-        <i className="fa-solid fa-computer-mouse text-3xl"></i>
+      <a
+        onClick={() => {
+          setActvSec("EXTRAS");
+        }}
+        className={`transition-all rounded-full w-11 p-1 ${
+          actvSec === "EXTRAS" ? "text-black bg-white" : "text-white bg-black"
+        }`}
+        href="#EXTRAS"
+      >
+        <i className="transition-all fa-solid fa-computer-mouse text-3xl"></i>
       </a>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <h1>
-        <i className="fa-regular fa-circle-dot text-base text-white"></i>
-      </h1>
-      <a className=" rounded-full w-11 p-1 text-white" href="#CONTACT">
-        <i className="fa-solid fa-address-book text-3xl"></i>
+      <a
+        onClick={() => {
+          setActvSec("CONTACT");
+        }}
+        className={`transition-all rounded-full w-11 p-1 ${
+          actvSec === "CONTACT" ? "text-black bg-white" : "text-white bg-black"
+        }`}
+        href="#CONTACT"
+      >
+        <i className="transition-all fa-solid fa-address-book text-3xl"></i>
       </a>
     </div>
   );

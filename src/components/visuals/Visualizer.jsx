@@ -5,7 +5,7 @@ import { Educat } from "./division/Educat";
 import { Extras } from "./division/Extras";
 import { Contact } from "./division/Contact";
 
-export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setMs3Rotate }) => {
+export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setActvSec }) => {
   const scrollContainerRef = useRef(null);
   const [prevScrollY, setPrevScrollY] = useState(0);
 
@@ -21,20 +21,18 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setMs3Rotate }) => {
       const scrollSpeed = Math.abs(scrollY - prevScrollY);
       const rotate = 2 + scrollSpeed * 0.05;
 
-      const isScrollingDown = scrollY > prevScrollY;
+      const isScrollingDown = scrollY >= prevScrollY;
 
       if (
         homeSection &&
         scrollY >= homeSection.offsetTop &&
         scrollY < projectSection.offsetTop
       ) {
+        setActvSec("HOME");
         setMs1Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
         setMs2Rotate(
-          (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
-        );
-        setMs3Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
       } else if (
@@ -42,13 +40,11 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setMs3Rotate }) => {
         scrollY >= projectSection.offsetTop &&
         scrollY < educatSection.offsetTop
       ) {
+        setActvSec("PROJECT");
         setMs1Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
         setMs2Rotate(
-          (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
-        );
-        setMs3Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
       } else if (
@@ -56,13 +52,11 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setMs3Rotate }) => {
         scrollY >= educatSection.offsetTop &&
         scrollY < extrasSection.offsetTop
       ) {
+        setActvSec("EDUCAT");
         setMs1Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
         setMs2Rotate(
-          (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
-        );
-        setMs3Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
       } else if (
@@ -70,23 +64,19 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setMs3Rotate }) => {
         scrollY >= extrasSection.offsetTop &&
         scrollY < contactSection.offsetTop
       ) {
+        setActvSec("EXTRAS");
         setMs1Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
         setMs2Rotate(
-          (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
-        );
-        setMs3Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
       } else if (contactSection && scrollY >= contactSection.offsetTop) {
+        setActvSec("CONTACT");
         setMs1Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
         setMs2Rotate(
-          (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
-        );
-        setMs3Rotate(
           (prevRotate) => prevRotate + (isScrollingDown ? rotate : -rotate)
         );
       }
@@ -103,7 +93,7 @@ export const Visualizer = ({ setMs1Rotate, setMs2Rotate, setMs3Rotate }) => {
         scrollContainerRef.current.removeEventListener("scroll", handleScroll);
       }
     };
-  }, [setMs1Rotate, setMs2Rotate, setMs3Rotate, prevScrollY]);
+  }, [setMs1Rotate, setMs2Rotate, prevScrollY]);
 
   return (
     <div
