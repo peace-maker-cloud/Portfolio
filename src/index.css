@@ -17,11 +17,26 @@
 
 /* Visualizer */
 /* Home */
-.home-anime {
-  animation-name: peak;
+.profile-pic:hover .left-wing {
+  animation: leftpeak 1s forwards;
 }
-@keyframes peak {
+
+.profile-pic:hover .right-wing {
+  animation: rightpeak 1s forwards;
 }
+
+@keyframes leftpeak {
+  100% {
+    transform: translateX(230px);
+  }
+}
+
+@keyframes rightpeak {
+  to {
+    transform: translateX(-230px);
+  }
+}
+
 /* Home end */
 
 .project-anime {
