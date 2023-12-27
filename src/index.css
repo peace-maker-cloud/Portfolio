@@ -32,7 +32,7 @@
 }
 
 @keyframes rightpeak {
-  to {
+  100% {
     transform: translateX(-230px);
   }
 }
